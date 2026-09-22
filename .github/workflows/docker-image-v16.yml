@@ -484,7 +484,7 @@ jobs:
         uses: docker/login-action@v4
 
         with:
-          registry: crpi-0bhfwgabexqd04h9.cn-hangzhou.personal.cr.aliyuncs.com
+          registry: crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com
           username: ${{ secrets.ALIRP_USERNAME }}
           password: ${{ secrets.ALIRP_PASSWORD }}
 
