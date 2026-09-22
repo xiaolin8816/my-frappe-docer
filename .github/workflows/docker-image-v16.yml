@@ -512,8 +512,8 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/16-neizhang:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/16-waizhang:latest
-            crpi-0bhfwgabexqd04h9.cn-hangzhou.personal.cr.aliyuncs.com/fengmaode/16-neizhang:latest
-            crpi-0bhfwgabexqd04h9.cn-hangzhou.personal.cr.aliyuncs.com/fengmaode/16-waizhang:latest
+            crpi-0bhfwgabexqd04h9.cn-hangzhou.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:latest
+            crpi-0bhfwgabexqd04h9.cn-hangzhou.personal.cr.aliyuncs.com/huangxiaolin/16-waizhang:latest
 
           build-args: |
             FRAPPE_PATH=https://github.com/frappe/frappe
