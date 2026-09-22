@@ -13,7 +13,7 @@ env:
   INSIGHTS_VERSION: v3.13.2         # https://github.com/frappe/insights/tags
 
   FENGJING_VERSION: develop         # https://github.com/1060778506/fengjing_app/branches
-
+  DYEING_FINISHING_VERSION: main    # https://github.com/xiaolin8816/dyeing_finishing/branches
   ERPNEXT_CHINA_VERSION: master     # https://gitee.com/yuzelin/erpnext_china/branches
 
   BEAM_VERSION: v15.11.1            # https://github.com/agritheory/beam/tags
@@ -67,6 +67,7 @@ jobs:
             {"url": "https://github.com/frappe/print_designer", "branch": "${PRINT_DESIGNER_VERSION}"},
             {"url": "https://github.com/frappe/builder", "branch": "${BUILDER_VERSION}"},
             {"url": "https://github.com/frappe/wiki", "branch": "${WIKI_VERSION}"},
+            {"url": "https://github.com/xiaolin8816/dyeing_finishing", "branch": "${DYEING_FINISHING_VERSION}"},
             {"url": "https://github.com/agatho-daemon/crispy_print", "branch": "${CRISPY_PRINT_VERSION}"}
           ]
           EOF
