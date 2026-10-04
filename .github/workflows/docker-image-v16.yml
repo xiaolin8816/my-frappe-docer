@@ -6,23 +6,29 @@ on:
   workflow_dispatch:
 
 env:
-  FRAPPE_VERSION: v16.36.1          # https://github.com/frappe/frappe/tags
-  ERPNEXT_VERSION: v16.37.0         # https://github.com/frappe/erpnext/tags
-  HRMS_VERSION: v16.20.1            # https://github.com/frappe/hrms/tags
-  CRM_VERSION: v1.86.0              # https://github.com/frappe/crm/tags
-  INSIGHTS_VERSION: v3.14.2         # https://github.com/frappe/insights/tags
+  frappe_version: v16.36.1          # https://github.com/frappe/frappe/tags
+  erpnext_version: v16.37.0         # https://github.com/frappe/erpnext/tags
+  hrms_version: v16.20.1            # https://github.com/frappe/hrms/tags
+  crm_version: v1.86.0              # https://github.com/frappe/crm/tags
+  insights_version: v3.14.2         # https://github.com/frappe/insights/tags
 
-  FENGJING_VERSION: develop         # https://github.com/1060778506/fengjing_app/branches
-  DYEING_FINISHING_VERSION: main    # https://github.com/xiaolin8816/dyeing_finishing/branches
-  ERPNEXT_CHINA_VERSION: master     # https://gitee.com/yuzelin/erpnext_china/branches
+  fengjing_version: develop         # https://github.com/1060778506/fengjing_app/branches
 
-  BEAM_VERSION: v15.11.1            # https://github.com/agritheory/beam/tags
-  PRINT_DESIGNER_VERSION: v1.6.7    # https://github.com/frappe/print_designer/tags
-  BUILDER_VERSION: v1.35.0          # https://github.com/frappe/builder/tags
-  WIKI_VERSION: master              # https://github.com/frappe/wiki/branches
+  erpnext_china_version: master     # https://gitee.com/yuzelin/erpnext_china/branches
 
-  CRISPY_PRINT_VERSION: v0.2.0-rc.1 # https://github.com/agatho-daemon/crispy_print/tags
+  beam_version: v15.11.1            # https://github.com/agritheory/beam/tags
+  print_designer_version: v1.6.7    # https://github.com/frappe/print_designer/tags
+  builder_version: v1.35.0          # https://github.com/frappe/builder/tags
+  wiki_version: master              # https://github.com/frappe/wiki/branches
 
+  crispy_print_version: v0.2.0-rc.1 # https://github.com/agatho-daemon/crispy_print/tags
+
+  payments_version: version-16      # https://github.com/frappe/payments
+  webshop_version: version-16       # https://github.com/frappe/webshop
+  erpnext_shipping_version: v16.0.2 # https://github.com/frappe/erpnext-shipping
+  whatsapp_version: v1.1.1          # https://github.com/frappe/whatsapp
+
+  dyeing_finishing_version: main          # https://github.com/xiaolin8816/dyeing_finishing
 
 jobs:
   build-and-push:
@@ -57,21 +63,24 @@ jobs:
 
           cat > official_repo/apps.json <<EOF
           [
-            {"url": "https://github.com/frappe/erpnext", "branch": "${ERPNEXT_VERSION}"},
-            {"url": "https://github.com/frappe/hrms", "branch": "${HRMS_VERSION}"},
-            {"url": "https://github.com/frappe/crm", "branch": "${CRM_VERSION}"},
-            {"url": "https://github.com/frappe/insights", "branch": "${INSIGHTS_VERSION}"},
-            {"url": "https://github.com/1060778506/fengjing_app.git", "branch": "${FENGJING_VERSION}"},
-            {"url": "https://gitee.com/yuzelin/erpnext_china.git", "branch": "${ERPNEXT_CHINA_VERSION}"},
-            {"url": "https://github.com/agritheory/beam", "branch": "${BEAM_VERSION}"},
-            {"url": "https://github.com/frappe/print_designer", "branch": "${PRINT_DESIGNER_VERSION}"},
-            {"url": "https://github.com/frappe/builder", "branch": "${BUILDER_VERSION}"},
-            {"url": "https://github.com/frappe/wiki", "branch": "${WIKI_VERSION}"},
-            {"url": "https://github.com/xiaolin8816/dyeing_finishing", "branch": "${DYEING_FINISHING_VERSION}"},
-            {"url": "https://github.com/agatho-daemon/crispy_print", "branch": "${CRISPY_PRINT_VERSION}"}
+            {"url": "https://github.com/frappe/erpnext", "branch": "${erpnext_version}"},
+            {"url": "https://github.com/frappe/hrms", "branch": "${hrms_version}"},
+            {"url": "https://github.com/frappe/crm", "branch": "${crm_version}"},
+            {"url": "https://github.com/frappe/insights", "branch": "${insights_version}"},
+            {"url": "https://github.com/1060778506/fengjing_app.git", "branch": "${fengjing_version}"},
+            {"url": "https://gitee.com/yuzelin/erpnext_china.git", "branch": "${erpnext_china_version}"},
+            {"url": "https://github.com/agritheory/beam", "branch": "${beam_version}"},
+            {"url": "https://github.com/frappe/print_designer", "branch": "${print_designer_version}"},
+            {"url": "https://github.com/frappe/builder", "branch": "${builder_version}"},
+            {"url": "https://github.com/frappe/wiki", "branch": "${wiki_version}"},
+            {"url": "https://github.com/agatho-daemon/crispy_print", "branch": "${crispy_print_version}"},
+            {"url": "https://github.com/frappe/payments", "branch": "${payments_version}"},
+            {"url": "https://github.com/frappe/webshop", "branch": "${webshop_version}"},
+            {"url": "https://github.com/frappe/erpnext-shipping", "branch": "${erpnext_shipping_version}"},
+            {"url": "https://github.com/xiaolin8816/dyeing_finishing", "branch": "${dyeing_finishing_version}"},
+            {"url": "https://github.com/frappe/whatsapp", "branch": "${whatsapp_version}"}
           ]
           EOF
-
 
           # ============================================================
           # Builder Patch
@@ -114,7 +123,7 @@ jobs:
               npm --version && \
               yarn --version \
               ' && \
-              chown -R frappe:frappe /home/frappe/.nvm
+              chown -R frappe:root /home/frappe/.nvm
 
 
           # ============================================================
@@ -222,7 +231,7 @@ jobs:
               yarn --version && \
               codex --version \
               ' && \
-              chown -R frappe:frappe /home/frappe/.nvm
+              chown -R frappe:root /home/frappe/.nvm
 
 
           # ============================================================
@@ -426,7 +435,7 @@ jobs:
 
           RUN /home/frappe/frappe-bench/env/bin/python -m pip install playwright && \
               /home/frappe/frappe-bench/env/bin/python -m playwright install-deps chromium && \
-              install -d -o frappe -g frappe /opt/playwright-browsers
+              install -d -o frappe -g root /opt/playwright-browsers
 
           USER frappe
 
@@ -485,7 +494,7 @@ jobs:
         uses: docker/login-action@v4
 
         with:
-          registry: crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com
+          registry: crpi-0bhfwgabexqd04h9.cn-hangzhou.personal.cr.aliyuncs.com
           username: ${{ secrets.ALIRP_USERNAME }}
           password: ${{ secrets.ALIRP_PASSWORD }}
 
@@ -513,12 +522,12 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/16-neizhang:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/16-waizhang:latest
-            crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:latest
-            crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-waizhang:latest
+            crpi-0bhfwgabexqd04h9.cn-hangzhou.personal.cr.aliyuncs.com/fengmaode/16-neizhang:latest
+            crpi-0bhfwgabexqd04h9.cn-hangzhou.personal.cr.aliyuncs.com/fengmaode/16-waizhang:latest
 
           build-args: |
             FRAPPE_PATH=https://github.com/frappe/frappe
-            FRAPPE_BRANCH=${{ env.FRAPPE_VERSION }}
+            FRAPPE_BRANCH=${{ env.frappe_version }}
 
 
       # ============================================================
