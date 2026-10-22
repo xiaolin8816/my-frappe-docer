@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "status": "candidate",
-  "generated_at": "2026-10-22T15:03:40+08:00",
+  "generated_at": "2026-10-23T02:17:46+08:00",
   "core_major": 16,
   "core_version": "v16.52.0",
-  "image_tag": "v16.52.0-20261022.150340",
-  "product_tag": "v16.52.0-20261022.150340-p38441430909e",
-  "product_revision": "38441430909e",
+  "image_tag": "v16.52.0-20261023.021746",
+  "product_tag": "v16.52.0-20261023.021746-p9a645933f3e2",
+  "product_revision": "9a645933f3e2",
   "product_sources": {
-    "dyeing_finishing": "8897f79eaba473b46866557e78200496f598031cf5e023ae21ca8ef580013417",
-    "visual_print": "31b0576dd163f552f91c6bb0e7a5d970d58dfd483756c34ae25fdd1c08da28db",
+    "dyeing_finishing": "4c73014d1912c7c073867283a7d150bfab21a4eb68dec765387f095dd6a876f4",
+    "visual_print": "252bbdf58f566160b3250cf3d178b2f570e6716f6ccc7efcae1f62f55732ed1e",
     "license_core": "f1cd37afa321b9eb2fd57c2361ded2498d27c1d1fef63cbfc2e18f0310005132"
   },
-  "base_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-v16.52.0-20261022.150340",
-  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.52.0-20261022.150340-p38441430909e",
-  "changes": 1,
+  "base_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-v16.52.0-20261023.021746",
+  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.52.0-20261023.021746-p9a645933f3e2",
+  "changes": 0,
   "apps": [
     {
       "key": "FRAPPE_VERSION",
@@ -38,7 +38,7 @@
       "key": "HRMS_VERSION",
       "name": "HRMS",
       "repository": "https://github.com/frappe/hrms.git",
-      "current": "v16.51.0",
+      "current": "v16.52.0",
       "target": "v16.52.0",
       "commit": null,
       "reason": "同一主版本的最新正式版"
@@ -67,7 +67,7 @@
       "repository": "https://github.com/1060778506/fengjing_app.git",
       "current": "develop",
       "target": "develop",
-      "commit": "eec72bb89c8b2e58cc51b87e00880278fdf238cf",
+      "commit": "9416e5053f716edade753d109aad12475b52a00a",
       "reason": "保留分支并锁定远程提交"
     },
     {
