@@ -1,4 +1,4 @@
-name: Frappe-v16-多应用全家桶构建
+name: Frappe-v16-基础镜像构建
 
 on:
   push:
@@ -28,8 +28,6 @@ env:
   webshop_version: version-16       # https://github.com/frappe/webshop
   erpnext_shipping_version: v16.0.2 # https://github.com/frappe/erpnext-shipping
   whatsapp_version: v1.2.0          # https://github.com/frappe/whatsapp
-
-  dyeing_finishing_version: main          # https://github.com/xiaolin8816/dyeing_finishing
 
 jobs:
   build-and-push:
@@ -146,7 +144,6 @@ jobs:
             {"url": "https://github.com/frappe/payments", "branch": "${payments_version}"},
             {"url": "https://github.com/frappe/webshop", "branch": "${webshop_version}"},
             {"url": "https://github.com/frappe/erpnext-shipping", "branch": "${erpnext_shipping_version}"},
-            {"url": "https://github.com/xiaolin8816/dyeing_finishing", "branch": "${dyeing_finishing_version}"},
             {"url": "https://github.com/frappe/whatsapp", "branch": "${whatsapp_version}"}
           ]
           EOF
@@ -599,12 +596,10 @@ jobs:
             apps_json=official_repo/apps.json
 
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/16-neizhang:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/16-neizhang:${{ env.image_version }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/16-waizhang:latest
-            crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:latest
-            crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:${{ env.image_version }}
-            crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-waizhang:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/16-neizhang:base-latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/16-neizhang:base-${{ env.image_version }}
+            crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-latest
+            crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-${{ env.image_version }}
 
 
           build-args: |
@@ -621,13 +616,13 @@ jobs:
           set -eux
 
           docker pull \
-            ${{ secrets.DOCKERHUB_USERNAME }}/16-neizhang:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/16-neizhang:base-${{ env.image_version }}
 
 
           docker run \
             --rm \
             --entrypoint sh \
-            ${{ secrets.DOCKERHUB_USERNAME }}/16-neizhang:latest \
+            ${{ secrets.DOCKERHUB_USERNAME }}/16-neizhang:base-${{ env.image_version }} \
             -lc '
 
               echo ""
