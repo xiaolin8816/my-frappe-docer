@@ -6,19 +6,20 @@ on:
   workflow_dispatch:
 
 env:
-  frappe_version: v16.50.0          # https://github.com/frappe/frappe/tags
-  erpnext_version: v16.50.0         # https://github.com/frappe/erpnext/tags
-  hrms_version: v16.50.0            # https://github.com/frappe/hrms/tags
-  crm_version: v1.87.0              # https://github.com/frappe/crm/tags
-  insights_version: v3.14.2         # https://github.com/frappe/insights/tags
+  # 由镜像管理器智能更新；生产部署可据此精确识别和回退镜像。
+  image_version: v16.52.0-20261022.142108
+  frappe_version: v16.52.0          # https://github.com/frappe/frappe/tags
+  erpnext_version: v16.52.0         # https://github.com/frappe/erpnext/tags
+  hrms_version: v16.51.0            # https://github.com/frappe/hrms/tags
+  crm_version: v1.88.0              # https://github.com/frappe/crm/tags
+  insights_version: v3.15.1         # https://github.com/frappe/insights/tags
 
   fengjing_version: develop         # https://github.com/1060778506/fengjing_app/branches
 
   erpnext_china_version: master     # https://gitee.com/yuzelin/erpnext_china/branches
 
   beam_version: v15.11.1            # https://github.com/agritheory/beam/tags
-  print_designer_version: v1.6.7    # https://github.com/frappe/print_designer/tags
-  builder_version: v1.35.1          # https://github.com/frappe/builder/tags
+  builder_version: v1.36.0          # https://github.com/frappe/builder/tags
   wiki_version: master              # https://github.com/frappe/wiki/branches
 
   crispy_print_version: v0.2.0-rc.1 # https://github.com/agatho-daemon/crispy_print/tags
@@ -26,7 +27,7 @@ env:
   payments_version: version-16      # https://github.com/frappe/payments
   webshop_version: version-16       # https://github.com/frappe/webshop
   erpnext_shipping_version: v16.0.2 # https://github.com/frappe/erpnext-shipping
-  whatsapp_version: v1.1.1          # https://github.com/frappe/whatsapp
+  whatsapp_version: v1.2.0          # https://github.com/frappe/whatsapp
 
   dyeing_finishing_version: main          # https://github.com/xiaolin8816/dyeing_finishing
 
@@ -139,7 +140,6 @@ jobs:
             {"url": "https://github.com/1060778506/fengjing_app.git", "branch": "${fengjing_version}"},
             {"url": "https://gitee.com/yuzelin/erpnext_china.git", "branch": "${erpnext_china_version}"},
             {"url": "https://github.com/agritheory/beam", "branch": "${beam_version}"},
-            {"url": "https://github.com/frappe/print_designer", "branch": "${print_designer_version}"},
             {"url": "https://github.com/frappe/builder", "branch": "${builder_version}"},
             {"url": "https://github.com/frappe/wiki", "branch": "${wiki_version}"},
             {"url": "https://github.com/agatho-daemon/crispy_print", "branch": "${crispy_print_version}"},
@@ -203,7 +203,9 @@ jobs:
               apt-get install -y --no-install-recommends \
                   curl \
                   ca-certificates \
-                  xz-utils && \
+                  xz-utils \
+                  fontconfig \
+                  fonts-wqy-zenhei && \
               curl -fL \
                 "https://github.com/typst/typst/releases/download/v0.15.0/typst-x86_64-unknown-linux-musl.tar.xz" \
                 -o /tmp/typst.tar.xz && \
@@ -216,6 +218,8 @@ jobs:
                 /tmp/typst.tar.xz \
                 /tmp/typst-x86_64-unknown-linux-musl && \
               rm -rf /var/lib/apt/lists/* && \
+              fc-cache -f && \
+              fc-match "WenQuanYi Zen Hei" && \
               typst --version
 
 
@@ -314,7 +318,9 @@ jobs:
                   git \
                   curl \
                   ca-certificates \
-                  xz-utils && \
+                  xz-utils \
+                  fontconfig \
+                  fonts-wqy-zenhei && \
               curl -fL \
                 "https://github.com/typst/typst/releases/download/v0.15.0/typst-x86_64-unknown-linux-musl.tar.xz" \
                 -o /tmp/typst.tar.xz && \
@@ -327,6 +333,8 @@ jobs:
                 /tmp/typst.tar.xz \
                 /tmp/typst-x86_64-unknown-linux-musl && \
               rm -rf /var/lib/apt/lists/* && \
+              fc-cache -f && \
+              fc-match "WenQuanYi Zen Hei" && \
               typst --version
 
 
@@ -592,8 +600,10 @@ jobs:
 
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/16-neizhang:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/16-neizhang:${{ env.image_version }}
             ${{ secrets.DOCKERHUB_USERNAME }}/16-waizhang:latest
             crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:latest
+            crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:${{ env.image_version }}
             crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-waizhang:latest
 
 

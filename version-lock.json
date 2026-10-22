@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "status": "candidate",
+  "generated_at": "2026-10-22T14:21:08+08:00",
+  "core_major": 16,
+  "core_version": "v16.52.0",
+  "image_tag": "v16.52.0-20261022.142108",
+  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.52.0-20261022.142108",
+  "changes": 7,
+  "apps": [
+    {
+      "key": "FRAPPE_VERSION",
+      "name": "Frappe",
+      "repository": "https://github.com/frappe/frappe.git",
+      "current": "v16.50.0",
+      "target": "v16.52.0",
+      "commit": null,
+      "reason": "核心共同稳定版本"
+    },
+    {
+      "key": "ERPNEXT_VERSION",
+      "name": "ERPNext",
+      "repository": "https://github.com/frappe/erpnext.git",
+      "current": "v16.50.0",
+      "target": "v16.52.0",
+      "commit": null,
+      "reason": "核心共同稳定版本"
+    },
+    {
+      "key": "HRMS_VERSION",
+      "name": "HRMS",
+      "repository": "https://github.com/frappe/hrms.git",
+      "current": "v16.50.0",
+      "target": "v16.51.0",
+      "commit": null,
+      "reason": "同一主版本的最新正式版"
+    },
+    {
+      "key": "CRM_VERSION",
+      "name": "CRM",
+      "repository": "https://github.com/frappe/crm.git",
+      "current": "v1.87.0",
+      "target": "v1.88.0",
+      "commit": null,
+      "reason": "同一主版本的最新正式版"
+    },
+    {
+      "key": "INSIGHTS_VERSION",
+      "name": "Insights",
+      "repository": "https://github.com/frappe/insights.git",
+      "current": "v3.14.2",
+      "target": "v3.15.1",
+      "commit": null,
+      "reason": "同一主版本的最新正式版"
+    },
+    {
+      "key": "FENGJING_VERSION",
+      "name": "丰境 APP",
+      "repository": "https://github.com/1060778506/fengjing_app.git",
+      "current": "develop",
+      "target": "develop",
+      "commit": "eec72bb89c8b2e58cc51b87e00880278fdf238cf",
+      "reason": "保留分支并锁定远程提交"
+    },
+    {
+      "key": "ERPNEXT_CHINA_VERSION",
+      "name": "ERPNext China",
+      "repository": "https://gitee.com/yuzelin/erpnext_china.git",
+      "current": "master",
+      "target": "master",
+      "commit": "8ed75795ac6800fe2fcb21f5a286a69929d6ef3e",
+      "reason": "保留分支并锁定远程提交"
+    },
+    {
+      "key": "BEAM_VERSION",
+      "name": "Beam",
+      "repository": "https://github.com/agritheory/beam.git",
+      "current": "v15.11.1",
+      "target": "v15.11.1",
+      "commit": null,
+      "reason": "同一主版本的最新正式版"
+    },
+    {
+      "key": "BUILDER_VERSION",
+      "name": "Builder",
+      "repository": "https://github.com/frappe/builder.git",
+      "current": "v1.35.1",
+      "target": "v1.36.0",
+      "commit": null,
+      "reason": "同一主版本的最新正式版"
+    },
+    {
+      "key": "WIKI_VERSION",
+      "name": "Wiki",
+      "repository": "https://github.com/frappe/wiki.git",
+      "current": "master",
+      "target": "master",
+      "commit": "2372f859f6b7ee3b0cc7b1515a92cbd6a654e87e",
+      "reason": "保留分支并锁定远程提交"
+    },
+    {
+      "key": "CRISPY_PRINT_VERSION",
+      "name": "Crispy Print",
+      "repository": "https://github.com/agatho-daemon/crispy_print.git",
+      "current": "v0.2.0-rc.1",
+      "target": "v0.2.0-rc.1",
+      "commit": null,
+      "reason": "保持当前版本"
+    },
+    {
+      "key": "PAYMENTS_VERSION",
+      "name": "Payments",
+      "repository": "https://github.com/frappe/payments.git",
+      "current": "version-16",
+      "target": "version-16",
+      "commit": "cca07d9f9392e2ea0e521c5975151db9e4b6c321",
+      "reason": "保留分支并锁定远程提交"
+    },
+    {
+      "key": "WEBSHOP_VERSION",
+      "name": "Webshop",
+      "repository": "https://github.com/frappe/webshop.git",
+      "current": "version-16",
+      "target": "version-16",
+      "commit": "5ba16567c03405aa9f28fa7c58410eb02074c6c3",
+      "reason": "保留分支并锁定远程提交"
+    },
+    {
+      "key": "ERPNEXT_SHIPPING_VERSION",
+      "name": "Erpnext Shipping",
+      "repository": "https://github.com/frappe/erpnext-shipping.git",
+      "current": "v16.0.2",
+      "target": "v16.0.2",
+      "commit": null,
+      "reason": "同一主版本的最新正式版"
+    },
+    {
+      "key": "WHATSAPP_VERSION",
+      "name": "Whatsapp",
+      "repository": "https://github.com/frappe/whatsapp.git",
+      "current": "v1.1.1",
+      "target": "v1.2.0",
+      "commit": null,
+      "reason": "同一主版本的最新正式版"
+    },
+    {
+      "key": "DYEING_FINISHING_VERSION",
+      "name": "Dyeing Finishing",
+      "repository": "https://github.com/xiaolin8816/dyeing_finishing.git",
+      "current": "main",
+      "target": "main",
+      "commit": "f41748f58a8db753b828d61954f5f7234f2df3a6",
+      "reason": "保留分支并锁定远程提交"
+    }
+  ]
+}
