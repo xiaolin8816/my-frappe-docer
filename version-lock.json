@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
   "status": "candidate",
-  "generated_at": "2026-10-24T19:27:19+08:00",
+  "generated_at": "2026-10-25T02:22:46+08:00",
   "core_major": 16,
   "core_version": "v16.52.0",
-  "image_tag": "v16.52.0-20261024.192719",
-  "product_tag": "v16.52.0-20261024.192719-p113cf49a3e6b",
-  "product_revision": "113cf49a3e6b",
+  "image_tag": "v16.52.0-20261025.022246",
+  "product_tag": "v16.52.0-20261025.022246-p8ffdd19f361b",
+  "product_revision": "8ffdd19f361b",
   "product_sources": {
-    "dyeing_finishing": "7d539cc55c3c54fdb2b89022a4f07c26abfed7e443e2bade8bbb1b7916426e6a",
+    "dyeing_finishing": "60fe95d0b30e513ab338a24c53caa36661717afee41259216abf618a67afe578",
     "visual_print": "ede5ae9efdad4b9919a033a5f2b2711c1454338fff113d30965d199bca0ccc7b",
     "license_core": "f1cd37afa321b9eb2fd57c2361ded2498d27c1d1fef63cbfc2e18f0310005132"
   },
-  "base_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-v16.52.0-20261024.192719",
-  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.52.0-20261024.192719-p113cf49a3e6b",
+  "base_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-v16.52.0-20261025.022246",
+  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.52.0-20261025.022246-p8ffdd19f361b",
   "changes": 0,
   "apps": [
     {
