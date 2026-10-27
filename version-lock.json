@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "status": "candidate",
-  "generated_at": "2026-10-27T02:23:58+08:00",
+  "generated_at": "2026-10-28T02:23:46+08:00",
   "core_major": 16,
   "core_version": "v16.52.0",
-  "image_tag": "v16.52.0-20261027.022358",
-  "product_tag": "v16.52.0-20261027.022358-pa217dabae0f7",
-  "product_revision": "a217dabae0f7",
+  "image_tag": "v16.52.0-20261028.022346",
+  "product_tag": "v16.52.0-20261028.022346-p6ea964fd1591",
+  "product_revision": "6ea964fd1591",
   "product_sources": {
-    "dyeing_finishing": "076ef23f55fb91dae1ceb7f6f47cdf5f92ccbce07d9e5913e2a24245b70fc328",
+    "dyeing_finishing": "52a72fb23682f65b4dfc183118165b66877b97a8fce52f946d645a25496f21bc",
     "visual_print": "ede5ae9efdad4b9919a033a5f2b2711c1454338fff113d30965d199bca0ccc7b",
     "license_core": "f1cd37afa321b9eb2fd57c2361ded2498d27c1d1fef63cbfc2e18f0310005132"
   },
-  "base_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-v16.52.0-20261027.022358",
-  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.52.0-20261027.022358-pa217dabae0f7",
-  "changes": 1,
+  "base_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-v16.52.0-20261028.022346",
+  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.52.0-20261028.022346-p6ea964fd1591",
+  "changes": 2,
   "apps": [
     {
       "key": "FRAPPE_VERSION",
@@ -48,7 +48,7 @@
       "name": "CRM",
       "repository": "https://github.com/frappe/crm.git",
       "current": "v1.89.1",
-      "target": "v1.89.1",
+      "target": "v1.89.2",
       "commit": null,
       "reason": "同一主版本的最新正式版"
     },
@@ -67,7 +67,7 @@
       "repository": "https://github.com/1060778506/fengjing_app.git",
       "current": "develop",
       "target": "develop",
-      "commit": "b1ab172c0879b8f94353c41089b3445ef9bde252",
+      "commit": "6d7e1f130bd45c9ff02ee4be1aae47988a7ae1d1",
       "reason": "保留分支并锁定远程提交"
     },
     {
@@ -84,7 +84,7 @@
       "name": "Beam",
       "repository": "https://github.com/agritheory/beam.git",
       "current": "v15.11.1",
-      "target": "v15.11.1",
+      "target": "v15.11.2",
       "commit": null,
       "reason": "同一主版本的最新正式版"
     },
@@ -92,7 +92,7 @@
       "key": "BUILDER_VERSION",
       "name": "Builder",
       "repository": "https://github.com/frappe/builder.git",
-      "current": "v1.36.1",
+      "current": "v1.36.2",
       "target": "v1.36.2",
       "commit": null,
       "reason": "同一主版本的最新正式版"

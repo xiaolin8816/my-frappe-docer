@@ -7,18 +7,18 @@ on:
 
 env:
   # 由镜像管理器智能更新；生产部署可据此精确识别和回退镜像。
-  image_version: v16.52.0-20261027.022358
+  image_version: v16.52.0-20261028.022346
   frappe_version: v16.52.0          # https://github.com/frappe/frappe/tags
   erpnext_version: v16.52.0         # https://github.com/frappe/erpnext/tags
   hrms_version: v16.52.0            # https://github.com/frappe/hrms/tags
-  crm_version: v1.89.1              # https://github.com/frappe/crm/tags
+  crm_version: v1.89.2              # https://github.com/frappe/crm/tags
   insights_version: v3.15.1         # https://github.com/frappe/insights/tags
 
   fengjing_version: develop         # https://github.com/1060778506/fengjing_app/branches
 
   erpnext_china_version: master     # https://gitee.com/yuzelin/erpnext_china/branches
 
-  beam_version: v15.11.1            # https://github.com/agritheory/beam/tags
+  beam_version: v15.11.2            # https://github.com/agritheory/beam/tags
   builder_version: v1.36.2          # https://github.com/frappe/builder/tags
   wiki_version: master              # https://github.com/frappe/wiki/branches
 
