@@ -7,10 +7,10 @@ on:
 
 env:
   # 由镜像管理器智能更新；生产部署可据此精确识别和回退镜像。
-  image_version: v16.53.0-20261030.022846
+  image_version: v16.53.0-20261031.022346
   frappe_version: v16.53.0          # https://github.com/frappe/frappe/tags
   erpnext_version: v16.53.0         # https://github.com/frappe/erpnext/tags
-  hrms_version: v16.52.0            # https://github.com/frappe/hrms/tags
+  hrms_version: v16.53.0            # https://github.com/frappe/hrms/tags
   crm_version: v1.90.0              # https://github.com/frappe/crm/tags
   insights_version: v3.15.1         # https://github.com/frappe/insights/tags
 
@@ -19,7 +19,7 @@ env:
   erpnext_china_version: master     # https://gitee.com/yuzelin/erpnext_china/branches
 
   beam_version: v15.11.2            # https://github.com/agritheory/beam/tags
-  builder_version: v1.36.4          # https://github.com/frappe/builder/tags
+  builder_version: v1.36.5          # https://github.com/frappe/builder/tags
   wiki_version: master              # https://github.com/frappe/wiki/branches
 
   crispy_print_version: v0.2.0-rc.1 # https://github.com/agatho-daemon/crispy_print/tags

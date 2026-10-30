@@ -1,26 +1,26 @@
 {
   "schema_version": 1,
   "status": "candidate",
-  "generated_at": "2026-10-30T02:28:46+08:00",
+  "generated_at": "2026-10-31T02:23:46+08:00",
   "core_major": 16,
   "core_version": "v16.53.0",
-  "image_tag": "v16.53.0-20261030.022846",
-  "product_tag": "v16.53.0-20261030.022846-p23191c9f60a5",
-  "product_revision": "23191c9f60a5",
+  "image_tag": "v16.53.0-20261031.022346",
+  "product_tag": "v16.53.0-20261031.022346-p6153f64fa906",
+  "product_revision": "6153f64fa906",
   "product_sources": {
-    "dyeing_finishing": "cbab086814badb6cff5b9aad4f02d3f839c0c061864a9100d253223de53e121f",
+    "dyeing_finishing": "6d1635c4fb565550e45fa73f656dc3578832682bd1369296f21e0ba3b4316278",
     "visual_print": "ede5ae9efdad4b9919a033a5f2b2711c1454338fff113d30965d199bca0ccc7b",
     "license_core": "f1cd37afa321b9eb2fd57c2361ded2498d27c1d1fef63cbfc2e18f0310005132"
   },
-  "base_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-v16.53.0-20261030.022846",
-  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.53.0-20261030.022846-p23191c9f60a5",
-  "changes": 4,
+  "base_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-v16.53.0-20261031.022346",
+  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.53.0-20261031.022346-p6153f64fa906",
+  "changes": 2,
   "apps": [
     {
       "key": "FRAPPE_VERSION",
       "name": "Frappe",
       "repository": "https://github.com/frappe/frappe.git",
-      "current": "v16.52.0",
+      "current": "v16.53.0",
       "target": "v16.53.0",
       "commit": null,
       "reason": "核心共同稳定版本"
@@ -29,7 +29,7 @@
       "key": "ERPNEXT_VERSION",
       "name": "ERPNext",
       "repository": "https://github.com/frappe/erpnext.git",
-      "current": "v16.52.0",
+      "current": "v16.53.0",
       "target": "v16.53.0",
       "commit": null,
       "reason": "核心共同稳定版本"
@@ -39,7 +39,7 @@
       "name": "HRMS",
       "repository": "https://github.com/frappe/hrms.git",
       "current": "v16.52.0",
-      "target": "v16.52.0",
+      "target": "v16.53.0",
       "commit": null,
       "reason": "同一主版本的最新正式版"
     },
@@ -47,7 +47,7 @@
       "key": "CRM_VERSION",
       "name": "CRM",
       "repository": "https://github.com/frappe/crm.git",
-      "current": "v1.89.2",
+      "current": "v1.90.0",
       "target": "v1.90.0",
       "commit": null,
       "reason": "同一主版本的最新正式版"
@@ -67,7 +67,7 @@
       "repository": "https://github.com/1060778506/fengjing_app.git",
       "current": "develop",
       "target": "develop",
-      "commit": "10b38cc44535727654cd986f744086515aa43a06",
+      "commit": "46692e83bbc1c7103611205e28b1a9f21f7c53fd",
       "reason": "保留分支并锁定远程提交"
     },
     {
@@ -92,8 +92,8 @@
       "key": "BUILDER_VERSION",
       "name": "Builder",
       "repository": "https://github.com/frappe/builder.git",
-      "current": "v1.36.3",
-      "target": "v1.36.4",
+      "current": "v1.36.4",
+      "target": "v1.36.5",
       "commit": null,
       "reason": "同一主版本的最新正式版"
     },
