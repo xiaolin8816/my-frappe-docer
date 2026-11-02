@@ -7,11 +7,11 @@ on:
 
 env:
   # 由镜像管理器智能更新；生产部署可据此精确识别和回退镜像。
-  image_version: v16.53.0-20261102.021846
+  image_version: v16.53.0-20261103.021647
   frappe_version: v16.53.0          # https://github.com/frappe/frappe/tags
   erpnext_version: v16.53.0         # https://github.com/frappe/erpnext/tags
   hrms_version: v16.53.0            # https://github.com/frappe/hrms/tags
-  crm_version: v1.90.0              # https://github.com/frappe/crm/tags
+  crm_version: v1.91.1              # https://github.com/frappe/crm/tags
   insights_version: v3.15.1         # https://github.com/frappe/insights/tags
 
   fengjing_version: develop         # https://github.com/1060778506/fengjing_app/branches
