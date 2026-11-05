@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "status": "candidate",
-  "generated_at": "2026-11-05T02:19:58+08:00",
+  "generated_at": "2026-11-06T02:23:48+08:00",
   "core_major": 16,
   "core_version": "v16.53.0",
-  "image_tag": "v16.53.0-20261105.021958",
-  "product_tag": "v16.53.0-20261105.021958-p234dd69fb466",
+  "image_tag": "v16.53.0-20261106.022348",
+  "product_tag": "v16.53.0-20261106.022348-p234dd69fb466",
   "product_revision": "234dd69fb466",
   "product_sources": {
     "dyeing_finishing": "7218a44652809bd3a7693a1f9cbde599fc7174441134443ca21125c56ff5c197",
     "visual_print": "ede5ae9efdad4b9919a033a5f2b2711c1454338fff113d30965d199bca0ccc7b",
     "license_core": "f1cd37afa321b9eb2fd57c2361ded2498d27c1d1fef63cbfc2e18f0310005132"
   },
-  "base_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-v16.53.0-20261105.021958",
-  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.53.0-20261105.021958-p234dd69fb466",
-  "changes": 2,
+  "base_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-v16.53.0-20261106.022348",
+  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.53.0-20261106.022348-p234dd69fb466",
+  "changes": 1,
   "apps": [
     {
       "key": "FRAPPE_VERSION",
@@ -38,7 +38,7 @@
       "key": "HRMS_VERSION",
       "name": "HRMS",
       "repository": "https://github.com/frappe/hrms.git",
-      "current": "v16.53.0",
+      "current": "v16.53.1",
       "target": "v16.53.1",
       "commit": null,
       "reason": "同一主版本的最新正式版"
@@ -67,7 +67,7 @@
       "repository": "https://github.com/1060778506/fengjing_app.git",
       "current": "develop",
       "target": "develop",
-      "commit": "e1b538dd00b815e8ed89e3d0c192bb3cef5b8661",
+      "commit": "ffd1740b0d0528255d80ee59fcef91a5a8d8d503",
       "reason": "保留分支并锁定远程提交"
     },
     {
@@ -92,8 +92,8 @@
       "key": "BUILDER_VERSION",
       "name": "Builder",
       "repository": "https://github.com/frappe/builder.git",
-      "current": "v1.36.6",
-      "target": "v1.37.0",
+      "current": "v1.37.0",
+      "target": "v1.37.3",
       "commit": null,
       "reason": "同一主版本的最新正式版"
     },
@@ -121,7 +121,7 @@
       "repository": "https://github.com/frappe/payments.git",
       "current": "version-16",
       "target": "version-16",
-      "commit": "cca07d9f9392e2ea0e521c5975151db9e4b6c321",
+      "commit": "9e842a473a8f4ec70a9ff06a3e067d10f98d26ed",
       "reason": "保留分支并锁定远程提交"
     },
     {
