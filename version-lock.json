@@ -1,26 +1,26 @@
 {
   "schema_version": 1,
   "status": "candidate",
-  "generated_at": "2026-11-07T02:29:11+08:00",
+  "generated_at": "2026-11-07T21:54:23+08:00",
   "core_major": 16,
   "core_version": "v16.54.0",
-  "image_tag": "v16.54.0-20261107.022911",
-  "product_tag": "v16.54.0-20261107.022911-p234dd69fb466",
+  "image_tag": "v16.54.0-20261107.215423",
+  "product_tag": "v16.54.0-20261107.215423-p234dd69fb466",
   "product_revision": "234dd69fb466",
   "product_sources": {
     "dyeing_finishing": "7218a44652809bd3a7693a1f9cbde599fc7174441134443ca21125c56ff5c197",
     "visual_print": "ede5ae9efdad4b9919a033a5f2b2711c1454338fff113d30965d199bca0ccc7b",
     "license_core": "f1cd37afa321b9eb2fd57c2361ded2498d27c1d1fef63cbfc2e18f0310005132"
   },
-  "base_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-v16.54.0-20261107.022911",
-  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.54.0-20261107.022911-p234dd69fb466",
-  "changes": 3,
+  "base_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:base-v16.54.0-20261107.215423",
+  "candidate_image": "crpi-ttjxp96yyxek6ba4.cn-shanghai.personal.cr.aliyuncs.com/huangxiaolin/16-neizhang:v16.54.0-20261107.215423-p234dd69fb466",
+  "changes": 1,
   "apps": [
     {
       "key": "FRAPPE_VERSION",
       "name": "Frappe",
       "repository": "https://github.com/frappe/frappe.git",
-      "current": "v16.53.0",
+      "current": "v16.54.0",
       "target": "v16.54.0",
       "commit": null,
       "reason": "核心共同稳定版本"
@@ -29,7 +29,7 @@
       "key": "ERPNEXT_VERSION",
       "name": "ERPNext",
       "repository": "https://github.com/frappe/erpnext.git",
-      "current": "v16.53.0",
+      "current": "v16.54.0",
       "target": "v16.54.0",
       "commit": null,
       "reason": "核心共同稳定版本"
@@ -67,7 +67,7 @@
       "repository": "https://github.com/1060778506/fengjing_app.git",
       "current": "develop",
       "target": "develop",
-      "commit": "8d3acf191aa634380aaba1befb40b8f9c4f36bcf",
+      "commit": "547ca457c877d65601931c8ec1339724681d4560",
       "reason": "保留分支并锁定远程提交"
     },
     {
@@ -92,8 +92,8 @@
       "key": "BUILDER_VERSION",
       "name": "Builder",
       "repository": "https://github.com/frappe/builder.git",
-      "current": "v1.37.3",
-      "target": "v1.37.4",
+      "current": "v1.37.4",
+      "target": "v1.37.5",
       "commit": null,
       "reason": "同一主版本的最新正式版"
     },
