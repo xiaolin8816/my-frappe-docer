@@ -7,7 +7,7 @@ on:
 
 env:
   # 由镜像管理器智能更新；生产部署可据此精确识别和回退镜像。
-  image_version: v16.55.0-20261113.022411
+  image_version: v16.55.0-20261114.022737
   frappe_version: v16.55.0          # https://github.com/frappe/frappe/tags
   erpnext_version: v16.55.0         # https://github.com/frappe/erpnext/tags
   hrms_version: v16.53.2            # https://github.com/frappe/hrms/tags
@@ -26,7 +26,7 @@ env:
 
   payments_version: version-16      # https://github.com/frappe/payments
   webshop_version: version-16       # https://github.com/frappe/webshop
-  erpnext_shipping_version: v16.0.2 # https://github.com/frappe/erpnext-shipping
+  erpnext_shipping_version: v16.0.3 # https://github.com/frappe/erpnext-shipping
   whatsapp_version: v1.2.0          # https://github.com/frappe/whatsapp
 
 jobs:
