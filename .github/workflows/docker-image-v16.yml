@@ -7,10 +7,10 @@ on:
 
 env:
   # 由镜像管理器智能更新；生产部署可据此精确识别和回退镜像。
-  image_version: v16.61.0-20261127.022420
+  image_version: v16.61.0-20261128.022011
   frappe_version: v16.61.0          # https://github.com/frappe/frappe/tags
   erpnext_version: v16.61.0         # https://github.com/frappe/erpnext/tags
-  hrms_version: v16.60.0            # https://github.com/frappe/hrms/tags
+  hrms_version: v16.60.1            # https://github.com/frappe/hrms/tags
   crm_version: v1.92.0              # https://github.com/frappe/crm/tags
   insights_version: v3.51.0         # https://github.com/frappe/insights/tags
 
